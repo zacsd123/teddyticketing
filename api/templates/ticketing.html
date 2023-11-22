@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TICKETING</title>
+</head>
+<body>
+    {% if msg != "" %}
+    <div>{{msg}}</div>
+    <button><a href="/">back</a></button>
+    {% else %}
+    <button><a href="/">back</a></button>
+    <table>
+        <tbody>
+            {% for j, r in enumerate(place.keys()) %}
+            <tr>
+                {% for i, c in enumerate(place[r]) %}
+                    {% if j < 2 %}
+                        {% if place[str(j)][i] == "Null" %}
+                        <td style="padding-left: 50px;"></td>
+                        {% else %}
+                        <td>
+                            <div style="width: 50px; height: 30px; background-color: #777;"></div>
+                        </td>
+                        {% endif %}
+                    {% elif ticketdata[(j-2)*13 + i][3] == "Null" %}
+                    <td style="padding-left: 50px;"></td>
+                    {% elif ticketdata[(j-2)*13 + i][3] == "1" %}
+                    <td>
+                        <form action="{{url_for('ticketing')}}" method="POST">
+                            <input type="submit" value="{{r}}{{i}}" style="width: 50px; height: 30px; background-color: #C32;" disabled>
+                        </form>
+                    </td>
+                    {% else %}
+                    <td>
+                        <form action="{{url_for('ticketing')}}" method="POST">
+                            <input name="data" type="hidden" value="{{r}} {{i}} {{(j-2)*13 + i}}">
+                            <input type="submit" value="{{r}}{{i}}" style="width: 50px; height: 30px; background-color: #395;">
+                        </form>
+                    </td>
+                    {% endif %}
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+</body>
+</html>
