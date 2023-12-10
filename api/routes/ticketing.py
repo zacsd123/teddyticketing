@@ -1,6 +1,25 @@
 from flask import Blueprint, request, session, redirect, render_template
 import sqlite3 as sql
-from .Data import UserData, TicketData, db_path
+import os
+
+C = os.path.dirname(__file__)
+db_path = os.path.join(C, "database")
+
+def UserData():
+    with sql.connect(db_path+"/userdata.db") as con:
+        con.row_factory = sql.Row
+        cur = con.cursor()
+        cur.execute("select * from userdata")
+        userdata = cur.fetchall()
+    return userdata
+
+def TicketData():
+    with sql.connect(db_path+"/ticketdata.db") as con:
+        con.row_factory = sql.Row
+        cur = con.cursor()
+        cur.execute("select * from ticket")
+        ticketdata = cur.fetchall()
+    return ticketdata
 
 ticketing = Blueprint("ticketing", __name__, template_folder="templates")
 place = {"0":[0, 1, 2, "Null", "Null", "Null", "Null", "Null", "Null", "Null", 9, 10, 11],
