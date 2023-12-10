@@ -1,5 +1,5 @@
 from flask import render_template, Blueprint, session, redirect
-from Data import UserData
+from .Data import UserData
 
 QRcode = Blueprint("qrcode", __name__, template_folder="/templates")
 
