@@ -1,8 +1,8 @@
 from flask import Flask, session
 from datetime import timedelta
 import sqlite3 as sql
-from routes import main, signin, signup, ticketing, userdata, qrcode
-from Data import UserData
+from .routes import main, signin, signup, ticketing, userdata, qrcode
+from .Data import UserData
 
 app = Flask(__name__)
 app.register_blueprint(main.main)
