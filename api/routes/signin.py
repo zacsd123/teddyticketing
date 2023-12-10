@@ -1,5 +1,16 @@
 from flask import Blueprint, redirect, session, request, render_template
-from .Data import UserData, C
+import os
+
+C = os.path.dirname(__file__)
+db_path = os.path.join(C, "database")
+
+def UserData():
+    with sql.connect(db_path+"/userdata.db") as con:
+        con.row_factory = sql.Row
+        cur = con.cursor()
+        cur.execute("select * from userdata")
+        userdata = cur.fetchall()
+    return userdata
 
 signin = Blueprint("signin", __name__, template_folder="templates")
 
