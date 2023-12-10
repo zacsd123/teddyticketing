@@ -1,6 +1,6 @@
 from flask import Blueprint, request, session, redirect, render_template
 import sqlite3 as sql
-from Data import UserData, TicketData, db_path
+from .Data import UserData, TicketData, db_path
 
 ticketing = Blueprint("ticketing", __name__, template_folder="templates")
 place = {"0":[0, 1, 2, "Null", "Null", "Null", "Null", "Null", "Null", "Null", 9, 10, 11],
