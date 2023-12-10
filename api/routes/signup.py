@@ -4,7 +4,7 @@ import sqlite3 as sql
 import random
 import smtplib
 import re
-from Data import UserData, db_path
+from .Data import UserData, db_path
 
 signup = Blueprint("signup", __name__, template_folder="templates")
 
