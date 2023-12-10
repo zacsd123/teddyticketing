@@ -1,5 +1,5 @@
 from flask import Blueprint, redirect, session, request, render_template
-from Data import UserData, C
+from .Data import UserData, C
 
 signin = Blueprint("signin", __name__, template_folder="templates")
 
