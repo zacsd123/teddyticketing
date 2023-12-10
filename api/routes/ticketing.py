@@ -2,7 +2,7 @@ from flask import Blueprint, request, session, redirect, render_template
 import sqlite3 as sql
 import os
 
-C = os.path.dirname(__file__)
+C = os.getcwd()
 db_path = os.path.join(C, "database")
 
 def UserData():
