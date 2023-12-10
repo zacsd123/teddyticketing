@@ -1,7 +1,7 @@
 from flask import render_template, Blueprint, session, redirect
 import os
 
-C = os.path.dirname(__file__)
+C = os.getcwd()
 db_path = os.path.join(C, "database")
 
 def UserData():
