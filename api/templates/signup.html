@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="bg-sign-up"></div>
+
+<div id="modalContainer" class="hidden">
+    <div id="modalContent">
+        <div id="modalheader">
+            Error
+            <i class="fa-light fa-xmark"></i>
+        </div>
+        <div id="modalbody"></div>
+        <div id="modalfooter">
+            <button type="button" id="modalCloseButton">닫기</button>
+        </div>
+    </div>
+</div>
+
+<div class="sign-up-content">
+    <div class="sign-up-text">Sign Up</div>
+
+    <div class="content">
+        <div class="sign-up-div">
+            <div class="label">아이디</div>
+            <input class="input" name="text" id="sign-up-input-id" type="text">
+            <div class="sign-up-div-button">
+                <button id="sign-up-chack" class="sign-up-chack" onclick="SignUpIdChack()">
+                    중복체크
+                    <div id="loader"></div>
+                </button>
+            </div>
+        </div>
+
+        <div class="sign-up-div">
+            <div class="label">비밀번호</div>
+            <input class="input" name="password" id="sign-up-input-password" type="password">
+        </div>
+
+        <div class="sign-up-div">
+            <div class="label">이메일</div>
+            <input class="input" name="email" id="sign-up-input-email" type="email">
+        </div>
+
+        <div class="sign-up-div">
+            <button class="sign-up-submit" onclick="SignUpClick()">인증번호 받기</button>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

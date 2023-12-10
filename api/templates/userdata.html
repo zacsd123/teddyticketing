@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="bg-userdata"></div>
+
+<div class="userdata-content">
+    <div class="userdata-state">
+        <div class="userdata-id">{{nowuser[1]}}</div>
+        <div class="userdata-email">{{nowuser[2]}}</div>
+        <div class="userdata-logout"><a href="/logout" class="userdata-logout-a">Log out</a></div>
+    </div>
+
+    <div class="userdata-image-div">
+        <span class="userdata-image-span">
+            <img src="/static/images/poster.png" alt="" class="userdata-poster">
+        </span>
+    </div>
+
+    <div class="userdata-eff">
+        <div class="userdata-eff-text">! 관람 시 생활기록부에 기재 가능 !</div>
+    </div>
+
+    {% if nowuser[-1] == "" %}
+    <div class="to-ticketing">
+        <a href="/ticketing" class="userdata-a">ticketing</a>
+    </div>
+    {% else %}
+    <div class="to-ticketing">
+        <a href="/qrcode" class="userdata-a">예메 정보</a>
+    </div>
+    {% endif %}
+</div>
+
+{% endblock %}

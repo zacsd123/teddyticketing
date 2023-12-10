@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="qrcode-content">
+    <div class="userdata-state">
+        <div class="userdata-id">{{nowuser[1]}}</div>
+        <div class="userdata-email">{{nowuser[2]}}</div>
+        <div class="userdata-logout"><a href="/logout" class="userdata-logout-a">Log out</a></div>
+    </div>
+
+    <div class="qrcode-explain">
+        <div class="explain-head">입장 시 주의사항</div>
+        <div class="explain-body">집장 시 QR코드를 보여주셔야 입장이 가능합니다!</div>
+        <div class="explain-body">콘서트 도중 자리 변경은 불가합니다. 예매한 좌석에 착석해주세요.</div>
+    </div>
+
+    <div class="about-ticket">
+        <div class="about-head">예매 정보</div>
+        <div class="about-name">{{nowuser[1]}}</div>
+        <div class="about-place">
+            <div class="place-left">{{space}}</div>
+            <div class="place-right">{{space}}</div>
+        </div>
+    </div>
+
+    <div class="qrcode-qr">
+        <span class="img-span">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?data={{space}}&amp;size=250x250" alt="" title="" class="img-qr" />
+        </span>
+    </div>
+
+    <div class="qrcode-button-place">
+        <a href="/"><button class="button">home</button></a>
+    </div>
+
+</div>
+
+{% endblock %}

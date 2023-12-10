@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./static/images/bear2.png">
+    <title>TEDDYTALKCONCERT</title>
+    <script src="https://kit.fontawesome.com/eb22a854ff.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./static/css/modal.css">
+    <link rel="stylesheet" href="./static/css/base.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./static/js/base.js"></script>
+</head>
+<body>
+    <div class="dont-touch dont-touch-hidden">
+    </div>
+    <header>
+        <div class="header"><a href="/" class="header-a-title">-Ideas Worth Sharing-</a></div>
+        <div class="headers">
+            <div><a href="/" class="header-a">2023</a></div>
+            <div><a href="/" class="header-a">TEDDY TALK CONCERT</a></div>
+            <div><a href="/" class="header-a">TICKETING</a></div>
+        </div>
+    </header>
+    {% block content %}
+    {% endblock %}
+    <footer>
+        <div class="footer-div">
+            <div class="sponsor">
+                <i class="fa-brands fa-instagram insta"></i>
+                <a href="https://instagram.com/posan_teddybear" target="_blank" class="insta-by-text">@posan_teddybear</a>
+            </div>
+            <div class="by">
+                <span class="text">with</span>
+                <a href="https://instagram.com/s__ng.__n" target="_blank" class="insta-by-text">@s__ng.__n</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

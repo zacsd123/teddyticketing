@@ -1,0 +1,1388 @@
+@font-face {
+    font-family: 'title';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/SF_HambakSnow.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'subtitle';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/KBIZHanmaumMyungjo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'explain';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'button';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/GOSEONGGEUMGANGNURI.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@import url(https://fonts.googleapis.com/css?family=Lato:300);
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background: linear-gradient(to bottom, #890F07, #C47878);
+    height: 100%;
+    position: relative;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none
+}
+
+.dont-touch {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.dont-touch-hidden {
+    display: none;
+}
+
+.header {
+    font-family: "title";
+    padding-top: 40px;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 7px;
+    text-shadow: 0px 3px 4px black;
+}
+
+.headers {
+    padding-top: 20px;
+    font-family: "subtitle";
+    text-align: center;
+    text-shadow: 0px 0px 4px #fffcab;
+    font-size: 33px;
+}
+
+.header-a-title {
+    text-decoration: none;
+    color: #FFFFFF;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.header-a {
+    text-decoration: none;
+    color: #ffeb9a;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+footer {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 90%;
+}
+
+.footer-div {
+    display: block;
+    justify-content: center;
+}
+
+.insta {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+    filter: brightness(0) invert(1);
+}
+
+.sponsor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.by {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.insta-by-text {
+    font-style: italic;
+    font-family: explain;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.text {
+    font-family: subtitle;
+    text-shadow: 0px 0px 1px #ffffff;
+    color: #FFF;
+    padding-right: 10px;
+}
+
+.button {
+    font-family: "button";
+    font-size: 20px;
+    color: #000;
+    text-decoration: none;
+    width: 150px;
+    height: 50px;
+    background-color: #ffeb9a;
+    border: none;
+    border-radius: 25px;
+}
+
+/* main.html */
+.main-content {
+    height: 40em;
+}
+
+.main-text {
+    padding-top: 70px;
+    font-family: "explain";
+    vertical-align: middle;
+    text-align: center;
+}
+
+.main-text-value {
+    font-size: 20px;
+    color: #ffeb9a;
+    text-shadow: 0px 0px 6px #fffcab;
+    padding-top: 7px;
+}
+
+.main-div {
+    padding-top: 30px;
+    text-align: center;
+}
+
+/* sign-up.html */
+
+.sign-up-content {
+    height: 40em;
+}
+
+.sign-up-text {
+    margin-top: 30px;
+    padding: 5px 0px 5px 0px;
+    width: 100%;
+    font-family: "explain";
+    font-size: 27px;
+    text-align: center;
+    color: #FFF;
+    background-color: #7D3636;
+}
+
+.content {
+    padding-left: 10%;
+    width: 80%;
+    text-align: center;
+}
+
+.sign-up-div {
+    width: 100%;
+    margin-top: 35px;
+    font-family: "explain";
+    text-align: center;
+}
+
+.label {
+    color: #FFF;
+}
+
+.input {
+    border: none;
+    border-radius: 10px;
+    width: 200px;
+    height: 20px;
+    background-color: #CB9290;
+}   
+
+.sign-up-div-button {
+    padding-top: 10px;
+    padding-right: 70px;
+    text-align: right;
+}
+
+
+.sign-up-chack {
+    font-family: "explain";
+    border: 0px;
+    width: 65px;
+    height: 30px;
+    background: #FFF;
+    border-radius: 5px;
+    color: #000;display: flex;
+    margin-left: auto;
+    margin-right: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader1{
+    position: relative;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    border: 3px solid  rgba(170, 170, 170, 0.7);
+  
+    -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+    -webkit-animation: loader1 3s linear infinite;
+        animation: loader1 3s linear infinite;
+}
+
+.loader1:after{
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 6px;
+    width: 6px;
+    height: 6px;
+    border-radius: 5px;
+    background-color: #636363;
+}
+
+@-webkit-keyframes loader1{
+    0%{-webkit-transform:rotate(0deg);}
+    100%{-webkit-transform:rotate(360deg);}
+}
+  
+@keyframes loader1{
+    0%{transform:rotate(0deg);}
+    100%{transform:rotate(360deg);}
+}
+
+.input:focus-visible {
+    outline: none !important;
+    box-shadow: 0 0 10px #7D3636;
+}
+
+.sign-up-submit {
+    font-family: "button";
+    font-size: 15px;
+    border: none;
+    border-radius: 40px;
+    width: 140px;
+    height: 50px;
+    color: #000;
+    background-color: #ffeb9a;
+}
+
+/* email */
+.email-content {
+    height: 40rem;
+}
+
+.email-add {
+    font-family: "explain";
+    margin-top: 40px;
+    text-align: center;
+}
+
+.button-place {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* signin */
+
+.sign-in-content {
+    height: 35rem;
+}
+
+.sign-in-text {
+    margin-top: 30px;
+    padding: 5px 0px 5px 0px;
+    width: 100%;
+    font-family: "explain";
+    font-size: 27px;
+    text-align: center;
+    color: #FFF;
+    background-color: #7D3636;
+}
+
+.sign-in-div {
+    width: 100%;
+    margin-top: 35px;
+    font-family: "explain";
+    text-align: center;
+}
+
+
+.sign-in-button {
+    height: 50px;
+    width: 150px;
+    color: #000;
+    font-size: 20px;
+    font-family: button;
+    background-color: #ffeb9a;
+    border: 0px;
+    border-radius: 25px;
+}
+
+.sign-in-divs {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 35px;
+    font-family: "explain";
+    text-align: center;
+    border-radius: 15px;
+}
+
+.sign-in-a {
+    display: flex;
+    background-color: #ffeb9a;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    height: 30px;
+    width: 100px;
+    text-decoration: none;
+    color: #000;
+    font-size: 15px;
+    font-family: button;
+}
+
+/* userdata */
+
+.userdata-content {
+    height: 50rem;
+}
+
+.userdata-state {
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    background-color: #7D3636;
+}
+
+.userdata-id {
+    margin-right: 10px;
+    color: #FFF;
+    font-family: explain;
+}
+
+.userdata-email {
+    margin-right: auto;
+    color: #FFF;
+    font-family: explain;
+}
+
+.userdata-logout-a {
+    text-decoration: none;
+    color: #FFF;
+    font-family: explain;
+}
+
+.userdata-image-div {
+    margin-top: 30px;
+}
+
+.userdata-image-span {
+    display: flex;
+    justify-content: center;
+}
+
+.userdata-poster {
+    width: 90%;
+    max-width: 750px;
+}
+
+.userdata-eff-text {
+    text-align: center;
+    font-size: 10px;
+    font-family: explain;
+    color: #ffeb9a;
+    text-shadow: 0px 0px 2px #fffcab;
+}
+
+.to-ticketing {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.userdata-a {
+    display: flex;
+    height: 50px;
+    width: 150px;
+    background-color: #ffeb9a;
+    color: #000;
+    font-family: button;
+    font-size: 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ticketing */
+.ticketing-content {
+    height: 85rem;
+}
+
+.ticketing-top {
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+    height: 40px;
+    font-family: explain;
+    font-size: 20px;
+    color: #FFF;
+    align-items: center;
+    justify-content: center;
+    background-color: #D40C0C;
+}
+
+.ticketing-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    margin: 20px;
+    padding: 10px;
+    background-color: #FFC8C8;
+}
+
+.null-place {
+    margin: 2px;
+    padding-left: 50px;
+}
+
+.non-place {
+    margin: 2px;
+    width: 50px; 
+    height: 30px; 
+    background-color: #A6A6A6;
+    border: 0;
+    border-radius: 7px;
+}
+
+.disable-place {
+    margin: 2px;
+    width: 50px; 
+    height: 30px; 
+    background-color: #D40C0C;
+    border: 0;
+    border-radius: 7px;
+    color: white;
+}
+
+.able-place {
+    margin: 2px;
+    width: 50px; 
+    height: 30px; 
+    background-color: #15441A;
+    border: 0;
+    border-radius: 7px;
+    color: white;
+}
+
+.ticketing-place {
+    width: 100%;
+    height: 30px;
+    background-color: #7D3636;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.place-ticket {
+    color: white;
+    font-family: explain;
+    font-size: 15px;
+}
+
+.select-place {
+    color: #FFEB9A;
+    font-family: explain;
+    font-size: 15px;
+}
+
+.ticketing-button-place {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ticketing-button {
+    margin-top: 25px;
+    width: 150px;
+    height: 50px;
+    border: 0;
+    border-radius: 25px;
+    background-color: #ffeb9a;
+    color: #000;
+    font-size: 20px;
+    font-family: explain;
+}
+
+/* qrcode */
+.qrcode-content {
+    height: 55rem;
+}
+
+.qrcode-explain {
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #7D3636;
+    color: white;
+    font-family: explain;
+    text-align: center;
+}
+
+.explain-head {
+    font-size: 20px;
+}
+
+.explain-body {
+    padding-top: 5px;
+    font-size: 13px;
+}
+
+.about-ticket {
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #7D3636;
+    color: white;
+    font-family: explain;
+    text-align: center;
+}
+
+.about-head {
+    font-size: 16px;
+}
+
+.about-name {
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+.about-place {
+    display: flex;
+}
+
+.place-left {
+    margin-right: auto;
+    padding-left: 20px;
+}
+
+.place-right {
+    margin-left: auto;
+    padding-right: 20px;
+}
+
+.qrcode-qr {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.img-span {
+    width: 250px;
+    height: 250px;
+}
+
+.img-qr {
+    width: 100%;
+    height: 100%;
+}
+
+.qrcode-button-place {
+    padding-top: 30px;
+    text-align: center;
+}
+
+
+
+@media (min-width: 425px) {
+    .header {
+        font-family: "title";
+        padding-top: 40px;
+        width: 100%;
+        text-align: center;
+        font-size: 26px;
+        letter-spacing: 7px;
+        text-shadow: 0px 3px 4px black;
+    }
+    
+    .headers {
+        padding-top: 20px;
+        font-family: "subtitle";
+        text-align: center;
+        text-shadow: 0px 0px 4px #fffcab;
+        font-size: 50px;
+    }
+    
+    .button {
+        font-family: "button";
+        font-size: 20px;
+        color: #000;
+        text-decoration: none;
+        width: 150px;
+        height: 50px;
+        background-color: #ffeb9a;
+        border: none;
+        border-radius: 25px;
+    }
+    
+    /* main.html */
+    .main-content {
+        height: 60em;
+    }
+    
+    .main-text {
+        padding-top: 70px;
+        font-family: "explain";
+        vertical-align: middle;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    
+    .main-text-value {
+        font-size: 25px;
+        color: #ffeb9a;
+        text-shadow: 0px 0px 6px #fffcab;
+        padding-top: 7px;
+    }
+    
+    .main-div {
+        padding-top: 30px;
+        text-align: center;
+    }
+    
+    /* sign-up.html */
+    
+    .sign-up-content {
+        height: 50em;
+    }
+    
+    .sign-up-text {
+        margin-top: 30px;
+        padding: 5px 0px 5px 0px;
+        width: 100%;
+        font-family: "explain";
+        font-size: 27px;
+        text-align: center;
+        color: #FFF;
+        background-color: #7D3636;
+    }
+    
+    .content {
+        padding-left: 10%;
+        width: 80%;
+        text-align: center;
+    }
+    
+    .sign-up-div {
+        width: 100%;
+        margin-top: 35px;
+        font-family: "explain";
+        text-align: center;
+    }
+    
+    .label {
+        color: #FFF;
+        font-size: 20px;
+    }
+    
+    .input {
+        border: none;
+        border-radius: 20px;
+        width: 300px;
+        height: 40px;
+        background-color: #CB9290;
+    }   
+    
+    .sign-up-div-button {
+        padding-top: 10px;
+        padding-right: 30%;
+        text-align: right;
+    }
+    
+    .sign-up-chack {
+        font-family: "explain";
+        border: 0px;
+        width: 65px;
+        height: 30px;
+        background: #FFF;
+        border-radius: 5px;
+        color: #000;display: flex;
+        margin-left: auto;
+        margin-right: 0;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .input:focus-visible {
+        outline: none !important;
+        box-shadow: 0 0 10px #7D3636;
+    }
+    
+    .sign-up-submit {
+        font-family: "button";
+        font-size: 15px;
+        border: none;
+        border-radius: 40px;
+        width: 140px;
+        height: 50px;
+        color: #000;
+        background-color: #ffeb9a;
+    }
+
+    /* email */
+    .email-content {
+        height: 45rem;
+    }
+
+    .email-add {
+        font-family: "explain";
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    .button-place {
+        text-align: center;
+        margin-top: 40px;
+    }
+    
+    /* signin */
+    
+    .sign-in-content {
+        height: 45rem;
+    }
+    
+    .sign-in-text {
+        margin-top: 30px;
+        padding: 5px 0px 5px 0px;
+        width: 100%;
+        font-family: "explain";
+        font-size: 27px;
+        text-align: center;
+        color: #FFF;
+        background-color: #7D3636;
+    }
+    
+    .sign-in-div {
+        width: 100%;
+        margin-top: 35px;
+        font-family: "explain";
+        text-align: center;
+    }
+    
+    .sign-in-button {
+        height: 50px;
+        width: 150px;
+        color: #000;
+        font-size: 20px;
+        font-family: button;
+        background-color: #ffeb9a;
+        border: 0px;
+        border-radius: 25px;
+    }
+    
+    .sign-in-divs {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 35px;
+        font-family: "explain";
+        text-align: center;
+        border-radius: 15px;
+    }
+    
+    .sign-in-a {
+        display: flex;
+        background-color: #ffeb9a;
+        align-items: center;
+        justify-content: center;
+        border-radius: 15px;
+        height: 30px;
+        width: 100px;
+        text-decoration: none;
+        color: #000;
+        font-size: 15px;
+        font-family: button;
+    }
+    
+    /* userdata */
+    
+    .userdata-content {
+        height: 90rem;
+    }
+    
+    .userdata-state {
+        padding-left: 10px;
+        padding-right: 10px;
+        display: flex;
+        align-items: center;
+        height: 50px;
+        background-color: #7D3636;
+    }
+    
+    .userdata-id {
+        margin-right: 10px;
+        color: #FFF;
+        font-family: explain;
+    }
+    
+    .userdata-email {
+        margin-right: auto;
+        color: #FFF;
+        font-family: explain;
+    }
+    
+    .userdata-logout-a {
+        text-decoration: none;
+        color: #FFF;
+        font-family: explain;
+    }
+    
+    .userdata-image-div {
+        margin-top: 30px;
+    }
+    
+    .userdata-image-span {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .userdata-poster {
+        width: 90%;
+        max-width: 750px;
+    }
+    
+    .userdata-eff-text {
+        text-align: center;
+        font-size: 15px;
+        font-family: explain;
+        color: #ffeb9a;
+        text-shadow: 0px 0px 2px #fffcab;
+    }
+    
+    .to-ticketing {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .userdata-a {
+        display: flex;
+        height: 50px;
+        width: 150px;
+        background-color: #ffeb9a;
+        color: #000;
+        font-family: button;
+        font-size: 20px;
+        border-radius: 25px;
+        text-decoration: none;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    /* ticketing */
+    .ticketing-content {
+        height: 85rem;
+    }
+    
+    .ticketing-top {
+        display: flex;
+        margin-top: 20px;
+        width: 100%;
+        height: 40px;
+        font-family: explain;
+        font-size: 20px;
+        color: #FFF;
+        align-items: center;
+        justify-content: center;
+        background-color: #D40C0C;
+    }
+    
+    .ticketing-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        margin: 20px;
+        padding: 10px;
+        background-color: #FFC8C8;
+    }
+    
+    .null-place {
+        margin: 2px;
+        padding-left: 50px;
+    }
+    
+    .non-place {
+        margin: 2px;
+        width: 50px; 
+        height: 30px; 
+        background-color: #A6A6A6;
+        border: 0;
+        border-radius: 7px;
+    }
+    
+    .disable-place {
+        margin: 2px;
+        width: 50px; 
+        height: 30px; 
+        background-color: #D40C0C;
+        border: 0;
+        border-radius: 7px;
+        color: white;
+    }
+    
+    .able-place {
+        margin: 2px;
+        width: 50px; 
+        height: 30px; 
+        background-color: #15441A;
+        border: 0;
+        border-radius: 7px;
+        color: white;
+    }
+    
+    .ticketing-place {
+        width: 100%;
+        height: 30px;
+        background-color: #7D3636;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .place-ticket {
+        color: white;
+        font-family: explain;
+        font-size: 15px;
+    }
+    
+    .select-place {
+        color: #FFEB9A;
+        font-family: explain;
+        font-size: 15px;
+    }
+    
+    .ticketing-button-place {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .ticketing-button {
+        margin-top: 25px;
+        width: 150px;
+        height: 50px;
+        border: 0;
+        border-radius: 25px;
+        background-color: #ffeb9a;
+        color: #000;
+        font-size: 20px;
+        font-family: explain;
+    }
+    
+    /* qrcode */
+    .qrcode-content {
+        height: 55rem;
+    }
+    
+    .qrcode-explain {
+        margin-top: 30px;
+        padding: 10px;
+        background-color: #7D3636;
+        color: white;
+        font-family: explain;
+        text-align: center;
+    }
+    
+    .explain-head {
+        font-size: 20px;
+    }
+    
+    .explain-body {
+        padding-top: 5px;
+        font-size: 13px;
+    }
+    
+    .about-ticket {
+        margin-top: 30px;
+        padding: 10px;
+        background-color: #7D3636;
+        color: white;
+        font-family: explain;
+        text-align: center;
+    }
+    
+    .about-head {
+        font-size: 16px;
+    }
+    
+    .about-name {
+        font-size: 20px;
+    }
+    
+    .about-place {
+        display: flex;
+    }
+    
+    .place-left {
+        margin-right: auto;
+        padding-left: 20px;
+    }
+    
+    .place-right {
+        margin-left: auto;
+        padding-right: 20px;
+    }
+    
+    .qrcode-qr {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .img-span {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .img-qr {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .qrcode-button-place {
+        padding-top: 30px;
+        text-align: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .header {
+        font-family: "title";
+        padding-top: 80px;
+        width: 100%;
+        text-align: center;
+        font-size: 35px;
+        letter-spacing: 7px;
+        color: #FFFFFF;
+        text-shadow: 0px 10px 10px black;
+        text-decoration: none;
+    }
+
+    .headers {
+        padding-top: 20px;
+        font-family: "subtitle";
+        text-align: center;
+        color: #ffeb9a;
+        text-shadow: 0px 0px 8px #fffcab;
+        font-size: 80px;
+        text-decoration: none;
+    }
+
+
+    /* main.html */
+    .main-content {
+        height: 65em;
+    }
+
+    .main-text {
+        padding-top: 170px;
+        font-family: "explain";
+        vertical-align: middle;
+        text-align: center;
+    }
+
+    .main-text-value {
+        font-size: 30px;
+        color: #ffeb9a;
+        text-shadow: 0px 0px 6px #fffcab;
+        padding-top: 7px;
+    }
+
+    .main-div {
+        padding-top: 30px;
+        text-align: center;
+    }
+
+    .button {
+        font-family: "button";
+        font-size: 25px;
+        color: #000;
+        text-decoration: none;
+        width: 200px;
+        height: 75px;
+        background-color: #ffeb9a;
+        border: none;
+        border-radius: 38px;
+    }
+    /* sign-up.html */
+
+    .sign-up-content {
+        height: 65em;
+    }
+
+    .sign-up-text {
+        margin-top: 30px;
+        padding: 10px 0px 10px 0px;
+        width: 100%;
+        font-family: "explain";
+        font-size: 44px;
+        text-align: center;
+        color: #FFF;
+        background-color: #7D3636;
+    }
+
+    .sign-up-div-button {
+        padding-top: 10px;
+        padding-right: 35%;
+        text-align: right;
+    }
+
+    .sign-up-chack {
+        font-family: "explain";
+        border: 0px;
+        width: 90px;
+        height: 35px;
+        background: #FFF;
+        border-radius: 10px;
+        color: #000;
+        display: flex;
+        margin-left: auto;
+        margin-right: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sign-up-submit {
+        font-family: "button";
+        font-size: 25px;
+        border: none;
+        border-radius: 40px;
+        width: 200px;
+        height: 75px;
+        color: #000;
+        background-color: #ffeb9a;
+    }
+
+    /* email */
+    .email-content {
+        height: 65rem;
+    }
+
+    .email-add {
+        font-family: "explain";
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    .button-place {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    /* signin */
+
+    .sign-in-content {
+        height: 65rem;
+    }
+
+    .sign-in-div {
+        margin-top: 70px;
+    }
+
+    .sign-in-button {
+        height: 75px;
+        width: 200px;
+        color: #000;
+        font-size: 25px;
+        font-family: button;
+        background-color: #ffeb9a;
+        border: 0px;
+        border-radius: 38px;
+    }
+
+    /* userdata */
+
+    .userdata-content {
+        height: 100rem;
+    }
+
+    .userdata-state {
+        padding-left: 10px;
+        padding-right: 10px;
+        display: flex;
+        height: 70px;
+        align-items: center;
+        background-color: #7D3636;
+        font-size: 33px;
+    }
+
+    .userdata-eff-text {
+        text-align: center;
+        font-size: 20px;
+        font-family: explain;
+        color: #ffeb9a;
+        text-shadow: 0px 0px 5px #fffcab;
+    }
+
+    .userdata-a {
+        display: flex;
+        height: 75px;
+        width: 200px;
+        background-color: #ffeb9a;
+        color: #000;
+        font-family: button;
+        font-size: 25px;
+        border-radius: 38px;
+        text-decoration: none;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* ticketing */
+    .ticketing-content {
+        height: 120rem;
+    }
+
+    .ticketing-top {
+        margin-top: 60px;
+        height: 60px;
+        font-size: 30px;
+        display: flex;
+        align-items: center;
+    }
+
+    .ticketing-div {
+        display: flex;
+        justify-content: center;
+    }
+
+    .ticketing-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        margin: 20px;
+        margin-top: 40px;
+        padding: 10px;
+        background-color: #FFC8C8;
+        max-width: 1105px;
+    }
+
+    .null-place {
+        margin: 5px;
+        padding-left: 70px;
+    }
+
+    .non-place {
+        margin: 5px;
+        width: 70px; 
+        height: 45px; 
+        background-color: #A6A6A6;
+        border: 0;
+        border-radius: 7px;
+    }
+
+    .disable-place {
+        margin: 5px;
+        width: 70px; 
+        height: 45px; 
+        background-color: #D40C0C;
+        border: 0;
+        border-radius: 7px;
+        color: white;
+    }
+
+    .able-place {
+        margin: 5px;
+        width: 70px; 
+        height: 45px; 
+        background-color: #15441A;
+        border: 0;
+        border-radius: 7px;
+        color: white;
+    }
+
+    .ticketing-place {
+        width: 100%;
+        height: 40px;
+        background-color: #7D3636;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .place-ticket {
+        color: white;
+        font-family: explain;
+        font-size: 20px;
+    }
+
+    .select-place {
+        color: #FFEB9A;
+        font-family: explain;
+        font-size: 20px;
+    }
+
+    .ticketing-button {
+        margin-top: 40px;
+        width: 200px;
+        height: 75px;
+        border: 0;
+        border-radius: 38px;
+        background-color: #ffeb9a;
+        color: #000;
+        font-size: 25px;
+        font-family: button;
+    }
+
+    /* qrcode */
+    .qrcode-content {
+        height: 65rem;
+    }
+
+    .explain-head {
+        font-size: 25px;
+    }
+
+    .explain-body {
+        padding-top: 5px;
+        font-size: 17px;
+    }
+
+    .about-head {
+        font-size: 16px;
+    }
+
+    .about-name {
+        margin-top: 5px;
+        font-size: 25px;
+    }
+
+    .place-left {
+        margin-right: auto;
+        padding-left: 20px;
+        font-size: 20px;
+    }
+
+    .place-right {
+        margin-left: auto;
+        padding-right: 20px;
+        font-size: 20px;
+    }
+
+    .qrcode-qr {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .img-span {
+        width: 300px;
+        height: 300px;
+    }
+}

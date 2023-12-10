@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="bg-ticketing"></div>
+
+<div id="modalContainer" class="hidden">
+    <div id="modalContent">
+        <div id="modalheader">
+            Error
+            <i class="fa-light fa-xmark"></i>
+        </div>
+        <div id="modalbody"></div>
+        <div id="modalfooter">
+            <button type="button" id="modalCloseButton">닫기</button>
+        </div>
+    </div>
+</div>
+
+<div id="ticketing-modalContainer" class="hidden">
+    <div id="ticketing-modalContent">
+        <div id="ticketing-modalheader">
+            예매
+            <i class="fa-light fa-xmark"></i>
+        </div>
+        <div id="ticketing-modalbody"></div>
+        <div id="ticketing-modalfooter">
+            <button type="button" id="ticketing-close-button" class="hidden">취소</button>
+            <button type="button" id="ticketing-modalCloseButton">확인</button>
+        </div>
+    </div>
+</div>
+
+<div class="ticketing-content">
+    <div class="userdata-state">
+        <div class="userdata-id">{{nowuser[1]}}</div>
+        <div class="userdata-email">{{nowuser[2]}}</div>
+        <div class="userdata-logout"><a href="/logout" class="userdata-logout-a">Log out</a></div>
+    </div>
+
+    <div class="ticketing-top">무대</div>
+
+    <div class="ticketing-div">
+        <table class="ticketing-table">
+            <thead>
+                <tr>
+                    <td>
+                        
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for j, r in enumerate(place.keys()) %}
+                <tr>
+                    {% for i, c in enumerate(place[r]) %}
+                        {% if j < 2 %}
+                            {% if place[str(j)][i] == "Null" %}
+                            <td class="null-place"></td>
+                            {% else %}
+                            <td>
+                                <div class="non-place"></div>
+                            </td>
+                            {% endif %}
+                        {% elif ticketdata[(j-2)*13 + i][3] == "Null" %}
+                        <td class="null-place"></td>
+                        {% elif ticketdata[(j-2)*13 + i][3] == "1" %}
+                        <td>
+                            <input class="disable-place" type="button" onclick="NonTicketing()" value="{{r}}{{i}}">
+                        </td>
+                        {% else %}
+                        <td>
+                            <input id="{{r}}{{i}}" name="{{r}}{{i}}" type="hidden" value="{{r}} {{i}} {{(j-2)*13 + i}}">
+                            <input class="able-place" type="button" onclick="Place('{{r}}{{i}}')" value="{{r}}{{i}}">
+                        </td>
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="ticketing-place">
+        <div class="place-ticket">선택한 좌석: </div>
+        <div class="select-place"></div>
+    </div>
+
+    <div class="ticketing-button-place">
+        <button class="ticketing-button" onclick="Ticketing()">예매하기</button>
+    </div>
+</div>
+
+{% endblock %}

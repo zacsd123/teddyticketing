@@ -1,0 +1,187 @@
+@font-face {
+    font-family: 'title';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/SF_HambakSnow.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'subtitle';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/KBIZHanmaumMyungjo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'explain';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'button';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/GOSEONGGEUMGANGNURI.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+.static {
+    overflow: hidden;
+}
+
+#modalContainer {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow: auto;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+#modalContainer.hidden {
+    display: none;
+}
+
+#modalContent {
+    font-family: explain;
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    background: #FFF;
+}
+
+#modalheader {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    height: 15%;
+}
+
+#modalbody {
+    height: 70%;
+    padding: 20px;
+}
+
+#modalfooter {
+    display: flex;
+    justify-content: right;
+    padding: 15px;
+    height: 15%;
+}
+
+#modalCloseButton {
+    margin: 0;
+    border: 0;
+    border-radius: 7px;
+    background-color: rgb(53, 53, 224);
+    width: 60px;
+    height: 30px;
+    color: white;
+    font-family: button;
+    font-size: 15px;
+}
+
+#ticketing-modalContainer {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow: auto;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+#ticketing-modalContainer.hidden {
+    display: none;
+}
+
+
+#ticketing-modalContent {
+    font-family: explain;
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    background: #FFF;
+}
+
+#ticketing-modalheader {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    height: 15%;
+}
+
+#ticketing-modalbody {
+    height: 70%;
+    padding: 20px;
+}
+
+#ticketing-modalfooter {
+    display: flex;
+    justify-content: right;
+    padding: 15px;
+    height: 15%;
+}
+
+#ticketing-close-button {
+    margin: 0;
+    margin-right: 10px;
+    border: 0;
+    border-radius: 7px;
+    background-color: rgb(53, 53, 224);
+    width: 60px;
+    height: 30px;
+    color: white;
+    font-family: button;
+    font-size: 15px;
+}
+
+.hidden {
+    display: none;
+}
+
+#ticketing-modalCloseButton {
+    margin: 0;
+    border: 0;
+    border-radius: 7px;
+    background-color: rgb(53, 53, 224);
+    width: 60px;
+    height: 30px;
+    color: white;
+    font-family: button;
+    font-size: 15px;
+}
+
+@media (min-width: 768px) {
+    #modalContainer {
+        font-size: 25px;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        overflow: auto;
+        top: 0px;
+        left: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.25);
+    }
+    
+    #ticketing-modalContainer {
+        font-size: 25px;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        overflow: auto;
+        top: 0px;
+        left: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.25);
+    }
+}
