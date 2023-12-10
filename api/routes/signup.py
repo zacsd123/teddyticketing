@@ -6,7 +6,7 @@ import smtplib
 import re
 import os
 
-C = os.path.dirname(__file__)
+C = os.getcwd()
 db_path = os.path.join(C, "database")
 
 def UserData():
