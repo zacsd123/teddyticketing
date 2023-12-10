@@ -1,4 +1,5 @@
 from flask import Blueprint, redirect, session, request, render_template
+import sqlite3 as sql
 import os
 
 C = os.getcwd()
