@@ -1,6 +1,6 @@
 from flask import Blueprint, redirect, request, session, render_template
 import sqlite3 as sql
-from Data import UserData, db_path
+from .Data import UserData, db_path
 
 users = Blueprint("userdata", __name__, template_folder="templates")
 
