@@ -1,6 +1,17 @@
 from flask import Blueprint, redirect, request, session, render_template
 import sqlite3 as sql
-from .Data import UserData, db_path
+import os
+
+C = os.path.dirname(__file__)
+db_path = os.path.join(C, "database")
+
+def UserData():
+    with sql.connect(db_path+"/userdata.db") as con:
+        con.row_factory = sql.Row
+        cur = con.cursor()
+        cur.execute("select * from userdata")
+        userdata = cur.fetchall()
+    return userdata
 
 users = Blueprint("userdata", __name__, template_folder="templates")
 
