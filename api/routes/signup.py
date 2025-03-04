@@ -46,9 +46,8 @@ def Signup():
             user_id = user["name"]
             user_password = user["password"]
             user_email = user["email"]
-
-            # 유효성 검사를 위한 정규표현식
-            reg = "^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$" 
+            
+            reg = "^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9]+\\.[a-zA-Z]{2,3}$" 
             if re.match(reg, user_email):
                 EMAIL = random.randrange(100000, 1000000)
                 s = smtplib.SMTP('smtp.gmail.com', 587)
